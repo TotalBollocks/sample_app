@@ -5,12 +5,12 @@ describe "StaticPages" do
 	describe "Home page" do
 
 		it "should have the content 'Sample App'" do
-			visit '/static_pages/home'
+			visit root_path
 			page.should have_selector('h1', :text => 'Home')
 		end
 
 		it "should have default title" do
-			visit '/static_pages/home'
+			visit root_path
 			page.should have_selector('title', :text => 'Sample App')
 			page.should_not have_selector('title', :text => '| Home')
 		end
@@ -19,12 +19,12 @@ describe "StaticPages" do
 	describe "Help Page" do
 
 		it "should have the content 'help'" do
-			visit '/static_pages/help'
+			visit help_path
 			page.should have_selector('h1', :text => 'Help')
 		end
 
 		it "should have title with 'Help'" do
-			visit '/static_pages/help'
+			visit help_path
 			page.should have_selector('title', :text => 'Help')
 		end
 	end
@@ -32,12 +32,12 @@ describe "StaticPages" do
 	describe "About Page" do
 
 		it "should have the content 'About Us" do
-			visit '/static_pages/about'
+			visit about_path
 			page.should have_selector('h1', :text => 'About')
 		end
 
 		it "should have title with 'About'" do
-			visit '/static_pages/about'
+			visit about_path
 			page.should have_selector('title', :text => 'About')
 		end
 	end
@@ -45,12 +45,12 @@ describe "StaticPages" do
 	describe "Contact Page" do
 
 		it "should have content 'Contact'" do
-			visit '/static_pages/contact'
+			visit contact_path
 			page.should have_selector('h1', :text => 'Contact')
 		end
 
 		it "should have a proper title" do
-			visit '/static_pages/contact'
+			visit contact_path
 			page.should have_selector('title', :text => 'Contact')
 		end
 	end
