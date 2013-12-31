@@ -12,6 +12,7 @@ describe "StaticPages" do
 		it "should have default title" do
 			visit '/static_pages/home'
 			page.should have_selector('title', :text => 'Sample App')
+			page.should_not have_selector('title', :text => '| Home')
 		end
 	end
 
