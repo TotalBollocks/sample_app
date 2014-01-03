@@ -46,6 +46,7 @@ describe 'User pages' do
 				let(:user) { User.find_by_email(ex@ex.com) }
 
 				it { should have_selector('div.alert.alert-success', text: 'Welcome') }
+				it { should have_link("Sign out") }
 			end
 		end
 	end
